@@ -1,0 +1,55 @@
+body{
+    font-family: arial, sans-serif;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.productItem{
+    background-color: lightgray;
+    border: 2px solid darkred;
+    padding: 10px;
+}
+/*Converter*/
+.convertButton{
+    text-align: center;
+}
+.convertButton button{
+    background-color: #34cf34;
+    border-radius: 15px;
+}
+.convertButton img{
+    max-width: 100px;
+}
+#thermometer {
+    display: flex;
+    align-items: flex-end;
+    width: 20px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+#mercury {
+    width: 100%;
+    height: 0;
+    background-color: red;
+    transition: height 0.5s ease;
+    border-radius: 10px;
+}
+
+.resultSet {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
