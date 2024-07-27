@@ -23,9 +23,14 @@ function taxesCalculation(){
 }
 
 function convert(){
-    var celsius = Number(prompt("Enter the temperature in Celsius:"));
-    var fahrenheit = (celsius * 9/5) + 32
 
+    if (scale == "C"){
+        var celsius = Number(prompt("Enter the temperature in Celsius:"));
+        var fahrenheit = (celsius * 9/5) + 32
+    }else if (scale == "F"){
+        var fahrenheit = Number(prompt("Enter the temperature in Fahrenheit:"));
+        var celsius = (fahrenheit - 32) * 5/9
+    }
     document.getElementById("conversionResult").innerHTML+=`
         <div class="resultSet">
             <p> Celsius: ${celsius} </p>
@@ -41,8 +46,8 @@ function convert(){
 
 function calculateMercuryHeight(fahrenheit) {
     // Set the thermometer height
-    const minTemp = -20; //
-    const maxTemp = 120; //
+    const minTemp = -20;
+    const maxTemp = 120;
 
     const percentage = ((fahrenheit - minTemp) / (maxTemp - minTemp)) * 100;
     return Math.min(100, Math.max(0, percentage));
