@@ -9,11 +9,20 @@
 <body>
 
     <h1>Temperature Converter</h1>
-    <h2>Enter Celsius and Get Fahrenheit!</h2>
+    <h2>Choose The Starting Scale Below!</h2>
+
 
     <div class="convertButton">
+        <img src="img/happysun.webp" alt="">
         <button onclick="convert()">Convert</button>
         <img src="img/happysun.webp" alt="">
+    </div>
+    <div class="radio-btn">
+        <label>Select unit:</label>
+        <input type="radio" id="celsiusRadio" name="unit" value="celsius" checked>
+        <label for="celsiusRadio">Celsius</label>
+        <input type="radio" id="fahrenheitRadio" name="unit" value="fahrenheit">
+        <label for="fahrenheitRadio">Fahrenheit</label>
     </div>
         <h2>Conversions</h2>
 

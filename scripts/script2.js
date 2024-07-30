@@ -23,13 +23,16 @@ function taxesCalculation(){
 }
 
 function convert(){
-
-    if (scale == "C"){
+    const celsiusRadio = document.getElementById("celsiusRadio");
+    const fahrenheitRadio = document.getElementById("fahrenheitRadio");
+    if (celsiusRadio.checked){
         var celsius = Number(prompt("Enter the temperature in Celsius:"));
-        var fahrenheit = (celsius * 9/5) + 32
-    }else if (scale == "F"){
+        var fahrenheit = (celsius * 9/5) + 32;
+
+    }else if (fahrenheitRadio.checked){
         var fahrenheit = Number(prompt("Enter the temperature in Fahrenheit:"));
-        var celsius = (fahrenheit - 32) * 5/9
+        var celsius = (fahrenheit - 32) * 5/9;
+
     }
     document.getElementById("conversionResult").innerHTML+=`
         <div class="resultSet">

@@ -55,7 +55,7 @@ function login(){
     let uname = prompt("Please enter your user name.")
     let pass = prompt("Please enter your password:");
     //compare the inputs with the DB data
-    if (uname==userName && pass==password){
+    if (uname===userName && pass===password){
         document.getElementById("results").innerHTML =
             "Welcome to the system " + uname;
     }else{

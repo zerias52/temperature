@@ -22,6 +22,10 @@ h1, h2{
 .convertButton img{
     max-width: 100px;
 }
+.radio-btn{
+    text-align: center;
+    padding: 30px;
+}
 #thermometer {
     display: flex;
     align-items: flex-end;
