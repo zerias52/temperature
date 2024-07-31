@@ -55,3 +55,46 @@ function calculateMercuryHeight(fahrenheit) {
     const percentage = ((fahrenheit - minTemp) / (maxTemp - minTemp)) * 100;
     return Math.min(100, Math.max(0, percentage));
 }
+
+function convertTemperatureRange() {
+    const rangeStart = Number(prompt("Enter your starting temperature:"));
+    const rangeEnd = Number(prompt("Enter your ending temperature:"));
+    const celsiusRadio = document.getElementById("celsiusRadio");
+    const fahrenheitRadio = document.getElementById("fahrenheitRadio");
+    const conversionResult = document.getElementById("conversionResult");
+    let cRange = []
+    let fRange = []
+
+    for (i = rangeStart; i <= rangeEnd; i++) {
+        if (celsiusRadio.checked) {
+            let celsius = i;
+            let fahrenheit = (celsius * 9 / 5) + 32;
+            cRange.push(celsius);
+            fRange.push(fahrenheit);
+        } else if (fahrenheitRadio.checked) {
+            let fahrenheit = i
+            let celsius = (fahrenheit - 32) * 5 / 9;
+            cRange.push(celsius);
+            fRange.push(fahrenheit);
+        }
+    }
+
+    //Creating the table
+    const table = document.createElement("table");
+    const headerRow = table.insertRow();
+    const celsiusHeader = headerRow.insertCell();
+    celsiusHeader.textContent = "Celsius";
+    const fahrenheitHeader = headerRow.insertCell();
+    fahrenheitHeader.textContent = "Fahrenheit";
+
+    for (let i = 0; i < cRange.length; i++) {
+        const row = table.insertRow();
+        const celsiusCell = row.insertCell();
+        celsiusCell.textContent = cRange[i].toFixed(1);
+        const fahrenheitCell = row.insertCell();
+        fahrenheitCell.textContent = fRange[i].toFixed(1);
+    }
+
+  conversionResult.innerHTML = "";
+  conversionResult.appendChild(table);
+}

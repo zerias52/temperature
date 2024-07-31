@@ -56,4 +56,19 @@ h1, h2{
     margin: 10px;
 }
 
+#conversionResult table{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
 
+#conversionResult td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
